@@ -1,0 +1,30 @@
+<ion-content padding>
+  <form #form="ngForm">
+    <div>
+      <div padding text-center class="container-logo" margin-bottom>
+        <img src="assets/image/message.jpg">
+      </div>
+      <div padding text-center class="form-bottom-text">
+        <h3> Reset Password</h3>
+        <label>Enter the email address associated with your account,and review your email.</label>
+      </div>
+      <div text-center class="socialLogin" padding></div>
+      <div padding>
+        <ion-list>
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input name="email" type="email" [email]="true" ngModel required></ion-input>
+          </ion-item>
+        </ion-list>
+        <div padding>
+          <ion-button size="large" type="submit" [disabled]="form.invalid" expand="block" color="dark">Send</ion-button>
+        </div>
+        <div padding text-center class="form-bottom-text">
+          <label>
+            <a (click)="navigate()">Back to Login</a>
+          </label>
+        </div>
+      </div>
+    </div>
+  </form>
+</ion-content>

@@ -1,0 +1,34 @@
+<ion-content padding>
+  <form #form="ngForm">
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="8" size-lg="5" size-xs="12">
+          <div text-center>
+            <img src="../assets/image/message.jpg">
+            <h3>Welcom to Ionic Started Messagenger</h3>
+          </div>
+          <div padding>
+            <ion-item>
+              <ion-label position="floating">Email</ion-label>
+              <ion-input name="email" type="email" ngModel [email]="true" required></ion-input>
+            </ion-item>
+            <p>
+              <ion-item>
+                <ion-label position="floating">Password</ion-label>
+                <ion-input name="password" type="password" ngModel required></ion-input>
+              </ion-item>
+            </p>
+          </div>
+          <p text-right><a [routerLink]='["/forgot"]'> For got your password ?</a></p>
+          <div padding>
+            <ion-button size="large" type="submit" [disabled]="form.invalid" expand="block" >Login</ion-button>
+          </div>
+          <p text-center>Don't have a account?</p>
+          <div padding>
+            <ion-button size="large" type="submit" expand="block" color="danger" [routerLink]='["/dangki"]'>Register</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
